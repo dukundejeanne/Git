@@ -9,12 +9,14 @@ import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileService } from './services/profile.service';
 import {FormsModule } from '@angular/forms';
+import { GitComponent } from './git/git.component';
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     NavbarComponent,
-    AboutComponent
+    AboutComponent,
+    GitComponent
   ],
   imports: [
     BrowserModule,
