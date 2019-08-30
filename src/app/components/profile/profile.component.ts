@@ -9,7 +9,7 @@ import{ProfileService} from '../../services/profile.service'
 export class ProfileComponent implements OnInit {
   profile:any;
   repos:any;
-  username:any;
+   username:any;
 
   constructor(private profileservice:ProfileService) { }
   findProfile(){
@@ -18,10 +18,10 @@ export class ProfileComponent implements OnInit {
       console.log(profile);
       this.profile=profile;
     });
-    // this.profileservice.getProfileRepos().subscribe(repos=>{
-    //   console.log(repos);
-    //   this.repos=repos;
-    // });
+    this.profileservice.getProfileRepos().subscribe(repos=>{
+      console.log(repos);
+      this.repos=repos;
+    });
 
   }
 

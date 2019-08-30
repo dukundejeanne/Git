@@ -21,5 +21,9 @@ export class ProfileService {
    updateProfile(username:string){
      this.username=username;
    }
+   getProfileRepos(){
+    return this.http.get("https://api.github.com/users/" + this.username + "?accessToken=" +
+    this.accessToken + "&accesstoken=" +this. accessToken);
+  }
 }
 
