@@ -1,4 +1,4 @@
-<form action="" class="search-form">
+<!-- <form action="" class="search-form">
     <div class="from-group">
         <input type="text"  class="form-control" placeholder="Enter Username" name="username" (keyup)="findProfile()">
          <button class="">search</button>
@@ -56,4 +56,66 @@
         </div>
 </div> 
 
-     
+      -->
+
+<form action="" class="search-form">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter Username" [(ngModel)]="username" name="username"
+            (keyup)="findProfile()">
+        <button class=""> Search</button>
+    </div>
+</form>
+
+<div *ngIf="profile">
+    <!-- <div class="panel panel-default">
+         <div class="panel-heading">
+            {{profile.name}}<span>({{profile.login}})</span>
+            <span *ngIf="profile.company">Work at {{profile.company}}</span>
+            <span *ngIf="profile.location"> Live at {{profile.location}}</span>
+        </div> 
+    </div> -->
+
+    <div class="panel-body">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4" >
+                    <img src="{{profile.avatar_url}}" style="height: 300px; width: 300px" alt="picture">
+                    <br>
+                    <br>
+                    <p>
+                            <span class="btn btn-success btn-sm"> Repository {{profile.public_repos}}</span>
+                            <span class="btn btn-primary btn-sm"> Followers {{profile.followers}}</span>
+                            <span class="btn btn-danger btn-sm"> Following {{profile.following}}</span>
+                            <!-- <span class="btn btn-success btn-sm"> Gists {{profile.public_gists}}</span> -->
+                        </p>
+                </div>
+                <div class="col-sm-4">
+                    <ul class="list-group" style="top:5%">
+                        <li class="list-group-item" *ngIf="profile.name"><strong>Name: {{profile.name}}</strong></li>
+                        <li class="list-group-item" *ngIf="profile.blog"><strong>Bio: {{profile.bio}}</strong></li>
+                        <li class="list-group-item" *ngIf="profile.location"><strong>Location: {{profile.location}}</strong></li>
+                        <li class="list-group-item" *ngIf="profile.hireable"><strong>Hireable: {{profile.hireable}}</strong></li>
+                    <li class="list-group-item"><a href="{{profile.html_url}" target="_blank" class="btn btn-success btn-sm"> View Profile on GitHub</a></li>
+                </ul>
+                </div>
+                
+        </div>
+        <h3 class="panel-title" style="text-align: center; font-family:sans-serif"><strong> List of all Repository</strong></h3>
+        <div class="jumbotron">
+        <div class="row">            
+            <!-- <div class="col-md-4">                   
+                <h3 class="panel-title"> List of all Repository</h3>
+            </div>   -->
+                <br>
+                <br>         
+            <div class="col-md-4" *ngFor="let repo of repos">
+                <p>{{repo.name}}<a href=" {{ repo.html_url}}" target="_blank"
+                        class="btn btn-sm btn-warning pull-right">View on GitHub</a></p>
+                        <br>
+                <p>{{repo.description}}</p>
+            </div>
+        </div>  
+        </div>
+    </div>
+</div>
+</div>
