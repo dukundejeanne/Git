@@ -11,6 +11,7 @@ import { ProfileService } from './services/profile.service';
 import {FormsModule } from '@angular/forms';
 import { GitComponent } from './git/git.component';
 import { StrikethroughDirective } from './strikethrough.directive';
+import { DateCountPipe } from './date-count.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { StrikethroughDirective } from './strikethrough.directive';
     NavbarComponent,
     AboutComponent,
     GitComponent,
-    StrikethroughDirective
+    StrikethroughDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
