@@ -6,13 +6,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProfileService {
   private username:string;
-  private access_token='4a6f4836ced47ef9dee7e912fb16ec025c4b9cec';
+  private access_token='55883cc5b72e71acf216d2c7f9b508b0bb466553';
 
 
   constructor(private http:HttpClient) {
     console.log("service is ready");
     this.username='dukundejeanne';
-    this.access_token='4a6f4836ced47ef9dee7e912fb16ec025c4b9cec';
+    this.access_token='55883cc5b72e71acf216d2c7f9b508b0bb466553';
 
    }
    getProfileInfo(){

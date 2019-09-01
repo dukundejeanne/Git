@@ -5,39 +5,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav" class="navbar-nav" style="margin-left:60% ">
-                <a class="nav-itemnav-link active" routerLink="git" routerLinkActive='active'>Home<span class="sr-only">(current)</span></a>
-
+                <a class="nav-item nav-link active" routerLink="git" routerLinkActive='active'>Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" routerLink="/about" routerLinkActive='active'>About</a>
        
-            <a class="nav-item nav-link active" routerLink="git" routerLinkActive='active'>HOME<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" routerLink="/about" routerLinkActive='active'>About</a>
-            <!-- <form action="" class="search-form"> -->
-                    <!-- <div class="form-group"> -->
+
                         <input type="text" style="width:30% ;margin-left: 2%" class="form-control" placeholder="Enter Username" [(ngModel)]="username" name="username"
                             (keyup)="findProfile()">
                         <button class="" style="margin-left: 2%"  > Search</button>
-                    <!-- </div> -->
-                <!-- </form> -->
-          </div>
+                </div>
         </div>
-      </nav>
+</nav>
+
 <div class="container">
 
-<!-- <form action="" class="search-form">
-    <div class="form-group">
-        <input type="text" style="width:30% ;margin-left: 2%" class="form-control" placeholder="Enter Username" [(ngModel)]="username" name="username"
-            (keyup)="findProfile()">
-        <button class="" style="margin-left: 2%"  > Search</button>
-    </div>
-</form> -->
 
 <div *ngIf="profile">
-    <!-- <div class="panel panel-default">
-         <div class="panel-heading">
-            {{profile.name}}<span>({{profile.login}})</span>
-            <span *ngIf="profile.company">Work at {{profile.company}}</span>
-            <span *ngIf="profile.location"> Live at {{profile.location}}</span>
-        </div> 
-    </div> -->
+  
 
     <div class="panel-body">
         <div class="panel-body">
@@ -50,7 +33,7 @@
                             <span class="btn btn-success btn-sm"> Repository {{profile.public_repos}}</span>
                             <span class="btn btn-primary btn-sm"> Followers {{profile.followers}}</span>
                             <span class="btn btn-danger btn-sm"> Following {{profile.following}}</span>
-                            <!-- <span class="btn btn-success btn-sm"> Gists {{profile.public_gists}}</span> -->
+                            
                         </p>
                 </div>
                 <div class="col-md-4">
@@ -70,9 +53,7 @@
         <h3 class="panel-title" style="text-align: center; font-family:sans-serif"><strong> List of all Repository</strong></h3>
         <div class="jumbotron">
         <div class="row">            
-            <!-- <div class="col-md-4">                   
-                <h3 class="panel-title"> List of all Repository</h3>
-            </div>   -->
+          
                 <br>
                 <br>         
             <div class="col-md-4" *ngFor="let repo of repos">
@@ -85,4 +66,4 @@
         </div>
     </div>
 </div>
-</div>
+</div> 
