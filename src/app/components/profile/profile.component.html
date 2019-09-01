@@ -45,6 +45,7 @@
                         <li class="list-group-item" *ngIf="profile.blog"><strong>Bio: {{profile.bio}}</strong></li>
                         <li class="list-group-item" *ngIf="profile.location"><strong>Location: {{profile.location}}</strong></li>
                         <li class="list-group-item" *ngIf="profile.hireable"><strong>Hireable: {{profile.hireable}}</strong></li>
+                        <li class="list-group-item" *ngIf="profile.created_at"><strong>Created on : {{profile.created_at|date}}</strong></li>
                      <a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm"> View Profile on GitHub</a>
                 </ul>
                 </div>
