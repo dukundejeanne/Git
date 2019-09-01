@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
 
 
   constructor(public profileService:ProfileService) {
-    this.profileService.username.then(profile => {
+    this.profileService.getProfileInfo().then(profile => {
       console.log(profile);
       this.profile=profile;
     });

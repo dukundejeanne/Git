@@ -12,7 +12,7 @@ export class AboutComponent implements OnInit {
    username:any;
 
   constructor(public profileService:ProfileService) {
-    this.profileService.getProfileInfo().subscribe(profile => {
+    this.profileService.getProfileInfo().then(profile => {
       console.log(profile);
       this.profile=profile;
     });
@@ -23,7 +23,7 @@ export class AboutComponent implements OnInit {
   }
   findProfile(){
     this.profileService.updateProfile(this.username);
-    this.profileService.getProfileInfo().subscribe (profile => {
+    this.profileService.getProfileInfo().then (profile => {
       console.log(profile);
       this.profile=profile;
     });

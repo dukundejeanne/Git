@@ -23,7 +23,7 @@ export class ProfileService {
     this.user=new User('','','','','','');
 
    }
-   getProfileInfo(username){
+   getProfileInfo(){
     interface ApiResponse{
       name:string;
       html_url:string;
