@@ -5,6 +5,6 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class StrikethroughDirective {
 
-  constructor( private elem:ElementRef) { }
+  constructor() { }
 
 }
