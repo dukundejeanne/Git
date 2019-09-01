@@ -10,13 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfileService } from './services/profile.service';
 import {FormsModule } from '@angular/forms';
 import { GitComponent } from './git/git.component';
+import { StrikethroughDirective } from './strikethrough.directive';
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     NavbarComponent,
     AboutComponent,
-    GitComponent
+    GitComponent,
+    StrikethroughDirective
   ],
   imports: [
     BrowserModule,

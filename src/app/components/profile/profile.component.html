@@ -17,14 +17,7 @@
 </nav> -->
 
 <div class="container">
-    <form>
-        <div>
-                <input type="text" style="width:30% ;margin-left: 2%" class="form-control" placeholder="Enter Username" [(ngModel)]="username" name="username"
-                (keyup)="findProfile()">
-            <button class="" style="margin-left: 2%"  > Search</button>
     
-        </div>
-    </form>
 
 
 <div *ngIf="profile">
@@ -34,6 +27,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-4" >
+                    <br>
                     <img src="{{profile.avatar_url}}" style="height: 300px; width: 300px ;margin-left: 2%"  alt="picture">
                     <br>
                     <br>
@@ -45,6 +39,7 @@
                         </p>
                 </div>
                 <div class="col-md-4">
+                    <br>
                     <ul class="list-group" >
                         <li class="list-group-item" *ngIf="profile.name"><strong>Name: {{profile.name}}</strong></li>
                         <li class="list-group-item" *ngIf="profile.blog"><strong>Bio: {{profile.bio}}</strong></li>
@@ -52,6 +47,17 @@
                         <li class="list-group-item" *ngIf="profile.hireable"><strong>Hireable: {{profile.hireable}}</strong></li>
                      <a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm"> View Profile on GitHub</a>
                 </ul>
+                </div>
+                <div class="col-md-4">
+                    <br>
+                        <form>
+                                <div>
+                                        <input type="text" style="width:60% ;margin-left: 2%" class="form-control" placeholder="Enter Username" [(ngModel)]="username" name="username"
+                                        (keyup)="findProfile()">
+                                    <button class="" style="margin-left: 2%"  > Search</button>
+                            
+                                </div>
+                            </form>
                 </div>
                 
         </div>
