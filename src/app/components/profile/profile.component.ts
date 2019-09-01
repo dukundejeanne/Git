@@ -14,8 +14,9 @@ export class ProfileComponent implements OnInit {
   repos:any;
    username:any;
 
+
   constructor(public profileService:ProfileService) {
-    this.profileService.getProfileInfo().subscribe(profile => {
+    this.profileService.username.then(profile => {
       console.log(profile);
       this.profile=profile;
     });
@@ -26,7 +27,7 @@ export class ProfileComponent implements OnInit {
   }
   findProfile(){
     this.profileService.updateProfile(this.username);
-    this.profileService.getProfileInfo().subscribe (profile => {
+    this.profileService.getProfileInfo().then(profile => {
       console.log(profile);
       this.profile=profile;
     });

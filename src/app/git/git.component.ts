@@ -12,23 +12,25 @@ import { ProfileService } from '../services/profile.service';
 })
 export class GitComponent implements OnInit {
  
-  // user:User;
+ 
+ public username='dukundejeanne';
+ public  getProfileInfo:string;
+ user:User;
+ findUser(username){
+   this. getProfileInfo='';
+   this.username=username;
+   this.ngOnInit();
+ }
 
 
-  constructor(private http:HttpClient) { 
-    
-  }
+
+  constructor(public userRequest:ProfileService,public repoRequest:ProfileService) { }
 
   ngOnInit() {
-  //   interface ApiResponse{
-  //     name:string;
-  //     location:string;
-  //     followers: string;
-  //     following:string;
-  //     repos:string;
-  //   }
-  //   this.http.get<ApiResponse>("https://api.github.com/users/dukundejeanne?access_token=4a6f4836ced47ef9dee7e912fb16ec025c4b9cec").subscribe(data=>
-  //     this.user=new User(data.name,data.location,data.followers,data.following))
+    this.userRequest.users(this.username);
+    this.user=this.userRequest.user;
+    //this.repoRequest.use
+  
    }
   
 
